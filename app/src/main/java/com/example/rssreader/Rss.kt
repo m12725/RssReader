@@ -98,8 +98,7 @@ fun parseRss(stream: InputStream) : Rss {
         val article = Article(
             title = xPath.evaluate("./title/text()", item),
             link = xPath.evaluate("./link/text()", item),
-            pubDate = formatter.parse(xPath.evaluate("./pubData/text()", item)))
-
+            pubDate = formatter.parse(xPath.evaluate("./pubDate/text()", item)))
         articles.add(article)
 
     }
