@@ -107,7 +107,7 @@ fun parseRss(stream: InputStream) : Rss {
     // RSSオブジェクトにまとめて返す
     return Rss(title = xPath.evaluate("/rss/channel/title/text()", doc),
         pubDate = formatter.parse(xPath.evaluate
-            ("/rss/channepubDate/text()", doc)),
+            ("/rss/channel/pubDate/text()", doc)),
         articles = articles)
 
 }
